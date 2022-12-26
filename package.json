@@ -1,0 +1,33 @@
+{
+  "name": "api-testing-example",
+  "version": "1.0.0",
+  "description": "An example for API testing using supertest, mocha, and chai.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./specs/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mona-Superscientist/Node.js-API-testing.git"
+  },
+  "author": "Mona M. Abd El-Rahman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mona-Superscientist/Node.js-API-testing/issues"
+  },
+  "homepage": "https://github.com/Mona-Superscientist/Node.js-API-testing#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "chai-subset": "^1.6.0",
+    "dotenv": "^16.0.3",
+    "lodash": "^4.17.21",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "install": "^0.13.0",
+    "npm": "^9.2.0"
+  }
+}
