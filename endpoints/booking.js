@@ -21,6 +21,6 @@ module.exports = {
     },
 
     updateBooking: (bookingId, token, bookingSample) => {
-        return request.post(`/booking/${bookingId}`, bookingSample, token)
+        return request.put(`/booking/${bookingId}`, bookingSample, token)
     }
 }

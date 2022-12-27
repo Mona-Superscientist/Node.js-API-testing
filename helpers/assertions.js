@@ -16,6 +16,8 @@ module.exports = {
 
     assertForbiddenStatusCode: response => _assertOnStatusCode(response, 403),
 
+    assertMethodNotAllowedStatusCode: response => _assertOnStatusCode(response, 405),
+
     assertInternalServerErrorStatusCode: response => _assertOnStatusCode(response, 500)
 
 }

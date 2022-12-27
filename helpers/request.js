@@ -14,7 +14,7 @@ module.exports = {
             return request(app)
                 .get(url)
                 .set({
-                    'Cookie': `token=${token}`
+                    Cookie: `token=${token}`
                 })
         }
     },
@@ -27,7 +27,7 @@ module.exports = {
             return request(app)
                 .delete(url)
                 .set({
-                    'Cookie': `token=${token}`
+                    Cookie: `token=${token}`
                 })
         }
     },
@@ -36,28 +36,38 @@ module.exports = {
         if (token === undefined) {
             return request(app)
                 .post(url)
+                .set({
+                    'Accept': 'application/json',
+                })
                 .send(payload)
         }
         else {
             return request(app)
                 .post(url)
                 .set({
-                    'Cookie': `token=${token}`
+                    'Accept': 'application/json',
+                    Cookie: `token=${token}`
                 }).send(payload)
         }
     },
 
     put: (url, payload, token) => {
         if (token === undefined) {
-            return request(app)
-                .put(url)
-                .send(payload)
-        }
-        else {
+            console.log('test no token')
             return request(app)
                 .put(url)
                 .set({
-                    'Cookie': `token=${token}`
+                    'Accept': 'application/json'
+                })
+                .send(payload)
+        }
+        else {
+            console.log('test token exists')
+            return request(app)
+                .put(url)
+                .set({
+                    'Accept': 'application/json',
+                    Cookie: `token=${token}`
                 }).send(payload)
         }
     }
